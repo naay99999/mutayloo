@@ -1,11 +1,21 @@
+import { ChartAreaInteractive } from './_components/chart-area-interactive'
+import { DataTable } from './_components/data-table'
+import { SectionCards } from './_components/section-cards'
+import { Toaster } from '@workspace/ui/components/sonner'
+import data from './data.json'
+
 export function Component() {
   return (
-    <section className="flex flex-col gap-3">
-      <p className="text-sm font-medium text-muted-foreground">Overview</p>
-      <h1 className="text-3xl font-semibold tracking-tight">Dashboard</h1>
-      <p className="max-w-2xl text-muted-foreground">
-        Sales and operations metrics will appear here when order and product APIs are available.
+    <>
+      <p className="px-4 text-sm text-muted-foreground lg:px-6">
+        Preview dashboard — metrics and documents use sample data.
       </p>
-    </section>
+      <SectionCards />
+      <div className="px-4 lg:px-6">
+        <ChartAreaInteractive />
+      </div>
+      <DataTable data={data} />
+      <Toaster />
+    </>
   )
 }

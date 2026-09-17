@@ -7,7 +7,7 @@ export function Component() {
         <p className="text-sm font-medium text-muted-foreground">404</p>
         <h1 className="text-3xl font-semibold tracking-tight">Page not found</h1>
         <p className="text-muted-foreground">This admin page does not exist.</p>
-        <Link className="text-sm font-medium text-primary underline-offset-4 hover:underline" to="/">
+        <Link className="text-sm font-medium text-primary underline-offset-4 hover:underline" to="/dashboard">
           Return to dashboard
         </Link>
       </div>

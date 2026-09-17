@@ -4,11 +4,19 @@ import { AdminLayout } from './pages/layout'
 
 export const router = createBrowserRouter([
   {
+    path: 'login',
+    lazy: () => import('./pages/login/login-page'),
+  },
+  {
+    path: '*',
+    lazy: () => import('./pages/not-found-page'),
+  },
+  {
     Component: AdminLayout,
     errorElement: <AdminRouteError />,
     children: [
       {
-        index: true,
+        path: 'dashboard',
         lazy: () => import('./pages/dashboard/dashboard-page'),
       },
       {
@@ -22,10 +30,6 @@ export const router = createBrowserRouter([
       {
         path: 'customers',
         lazy: () => import('./pages/customers/customers-page'),
-      },
-      {
-        path: '*',
-        lazy: () => import('./pages/not-found-page'),
       },
     ],
   },

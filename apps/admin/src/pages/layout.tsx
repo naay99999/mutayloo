@@ -1,39 +1,26 @@
-import { NavLink, Outlet } from 'react-router'
-import { cn } from '@workspace/ui/lib/utils'
-
-const navigation = [
-  { label: 'Dashboard', to: '/' },
-  { label: 'Products', to: '/products' },
-  { label: 'Orders', to: '/orders' },
-  { label: 'Customers', to: '/customers' },
-]
+import type { CSSProperties } from 'react'
+import { Outlet } from 'react-router'
+import { AppSidebar } from '@/components/layout/app-sidebar'
+import { SiteHeader } from '@/components/layout/site-header'
+import { SidebarInset, SidebarProvider } from '@workspace/ui/components/sidebar'
 
 export function AdminLayout() {
   return (
-    <div className="min-h-svh bg-background text-foreground lg:grid lg:grid-cols-[15rem_1fr]">
-      <aside className="border-b bg-sidebar lg:min-h-svh lg:border-r lg:border-b-0">
-        <div className="flex min-h-16 items-center px-4 text-lg font-semibold tracking-tight">
-          Mutayloo Admin
+    <SidebarProvider
+      style={{
+        '--sidebar-width': 'calc(var(--spacing) * 72)',
+        '--header-height': 'calc(var(--spacing) * 12)',
+      } as CSSProperties}
+    >
+      <AppSidebar variant="inset" />
+      <SidebarInset>
+        <SiteHeader />
+        <div className="flex flex-1 flex-col">
+          <main className="@container/main flex flex-1 flex-col gap-6 py-4 md:py-6">
+            <Outlet />
+          </main>
         </div>
-        <nav aria-label="Admin navigation" className="flex gap-1 overflow-x-auto px-3 pb-3 lg:flex-col lg:px-3">
-          {navigation.map((item) => (
-            <NavLink
-              className={({ isActive }) => cn(
-                'rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-sidebar-accent hover:text-sidebar-accent-foreground',
-                isActive && 'bg-sidebar-accent text-sidebar-accent-foreground',
-              )}
-              end={item.to === '/'}
-              key={item.to}
-              to={item.to}
-            >
-              {item.label}
-            </NavLink>
-          ))}
-        </nav>
-      </aside>
-      <main className="min-w-0 p-6 sm:p-10">
-        <Outlet />
-      </main>
-    </div>
+      </SidebarInset>
+    </SidebarProvider>
   )
 }

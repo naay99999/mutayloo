@@ -11,7 +11,7 @@ export function AdminRouteError() {
       <div className="flex max-w-md flex-col items-center gap-4">
         <p className="text-sm font-medium text-muted-foreground">Admin error</p>
         <h1 className="text-3xl font-semibold tracking-tight">{message}</h1>
-        <Link className="text-sm font-medium text-primary underline-offset-4 hover:underline" to="/">
+        <Link className="text-sm font-medium text-primary underline-offset-4 hover:underline" to="/dashboard">
           Return to dashboard
         </Link>
       </div>
