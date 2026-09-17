@@ -1,0 +1,10 @@
+{
+  "name": "@workspace/config",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    "./typescript/react": "./typescript/react.json",
+    "./typescript/vite": "./typescript/vite.json",
+    "./oxlint/react": "./oxlint/react.json"
+  }
+}
