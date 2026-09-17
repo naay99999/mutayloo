@@ -1,22 +1,25 @@
-# Elysia with Bun runtime
+# API
 
-## Getting Started
-To get started with this template, simply paste this command into your terminal:
+The API is an Elysia application running on Bun.
+
+## Commands
+
 ```bash
-bun create elysia ./elysia-example
+bun --filter api dev
+bun --filter api test
+bun --filter api typecheck
+bun --filter api lint
 ```
 
-## Development
-To start the development server run:
-```bash
-bun run dev
-```
+## Configuration
 
-Open http://localhost:6767/ with your browser to see the result.
+Copy `.env.example` to `.env.local` when needed. The defaults are `HOST=0.0.0.0` and `PORT=6767`.
 
-From the repository root, run `bun install` then `bun run dev` to start both apps.
-The storefront app uses Eden Treaty and imports the API type from the `api` workspace.
-Its default API URL is `http://localhost:6767`; set `VITE_API_URL` in
-`apps/storefront/.env.local` to override it (see `apps/storefront/.env.example`).
-CORS allows localhost and 127.0.0.1 on storefront ports 5173/4173 and
-admin ports 5174/4174. Run `bun run dev:admin` from the root to start only admin.
+For production, set `NODE_ENV=production` and `CORS_ORIGINS` to a comma-separated list of exact frontend origins. Startup fails if the allowlist is absent. CORS credentials are disabled until an authentication design explicitly requires them.
+
+## Endpoints
+
+- `GET /` returns the existing welcome response.
+- `GET /health` returns `{ "status": "ok" }` for liveness checks.
+
+Errors use `{ "code", "message" }` and never expose internal stack traces to clients.

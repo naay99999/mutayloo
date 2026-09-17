@@ -1,32 +1,14 @@
-# React + TypeScript + Vite
+# Storefront
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Customer-facing React 19 and Vite single-page application.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+bun --filter storefront dev
+bun --filter storefront typecheck
+bun --filter storefront lint
+bun --filter storefront build
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+The development server uses port 5173 and preview uses 4173. Set `VITE_API_URL` in `.env.local` to override the API URL; it defaults to `http://localhost:6767`.
+
+The app consumes the Elysia `App` type through Eden Treaty and imports shared UI from `@workspace/ui`.

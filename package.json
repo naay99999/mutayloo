@@ -1,6 +1,7 @@
 {
   "name": "mutayloo",
   "private": true,
+  "packageManager": "bun@1.3.14",
   "workspaces": [
     "apps/*",
     "packages/*"
@@ -9,6 +10,11 @@
     "dev": "bun --filter './apps/*' --parallel dev",
     "dev:storefront": "bun --filter storefront dev",
     "dev:admin": "bun --filter admin dev",
-    "dev:api": "bun --filter api dev"
+    "dev:api": "bun --filter api dev",
+    "lint": "bun --filter storefront lint && bun --filter admin lint && bun --filter api lint && bun --filter @workspace/ui lint",
+    "typecheck": "bun --filter storefront typecheck && bun --filter admin typecheck && bun --filter api typecheck && bun --filter @workspace/ui typecheck",
+    "test": "bun --filter api test",
+    "build": "bun --filter storefront build && bun --filter admin build",
+    "check": "bun run lint && bun run typecheck && bun run test && bun run build"
   }
 }

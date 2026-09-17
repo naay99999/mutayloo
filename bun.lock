@@ -45,7 +45,10 @@
         "elysia": "1.4.30",
       },
       "devDependencies": {
+        "@workspace/config": "workspace:*",
         "bun-types": "latest",
+        "oxlint": "^1.81.0",
+        "typescript": "~6.0.2",
       },
     },
     "apps/storefront": {
@@ -104,6 +107,8 @@
         "@types/node": "^24.13.3",
         "@types/react": "^19.2.18",
         "@types/react-dom": "^19.2.7",
+        "@workspace/config": "workspace:*",
+        "oxlint": "^1.81.0",
         "tailwindcss": "^4.1.18",
         "typescript": "~6.0.2",
       },

@@ -5,6 +5,8 @@
   "exports": {
     "./typescript/react": "./typescript/react.json",
     "./typescript/vite": "./typescript/vite.json",
+    "./typescript/bun": "./typescript/bun.json",
+    "./oxlint/base": "./oxlint/base.json",
     "./oxlint/react": "./oxlint/react.json"
   }
 }

@@ -2,15 +2,20 @@
   "name": "api",
   "version": "1.0.50",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "oxlint src test",
+    "test": "bun test"
   },
   "dependencies": {
     "@elysiajs/cors": "^1.4.0",
     "elysia": "1.4.30"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "@workspace/config": "workspace:*",
+    "bun-types": "latest",
+    "oxlint": "^1.81.0",
+    "typescript": "~6.0.2"
   },
   "exports": {
     ".": {
