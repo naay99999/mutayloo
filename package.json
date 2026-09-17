@@ -1,0 +1,14 @@
+{
+  "name": "mutayloo",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "bun --filter './apps/*' --parallel dev",
+    "dev:storefront": "bun --filter storefront dev",
+    "dev:admin": "bun --filter admin dev",
+    "dev:api": "bun --filter api dev"
+  }
+}
