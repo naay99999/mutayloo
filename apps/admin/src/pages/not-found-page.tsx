@@ -1,16 +1,27 @@
-import { Link } from 'react-router'
+import {
+  Empty,
+  EmptyContent,
+  EmptyDescription,
+  EmptyHeader,
+  EmptyTitle,
+} from '@workspace/ui/components/empty'
 
 export function Component() {
   return (
-    <section className="grid min-h-[60svh] place-items-center text-center">
-      <div className="flex max-w-md flex-col items-center gap-4">
-        <p className="text-sm font-medium text-muted-foreground">404</p>
-        <h1 className="text-3xl font-semibold tracking-tight">Page not found</h1>
-        <p className="text-muted-foreground">This admin page does not exist.</p>
-        <Link className="text-sm font-medium text-primary underline-offset-4 hover:underline" to="/dashboard">
-          Return to dashboard
-        </Link>
-      </div>
-    </section>
+    <main className="flex min-h-svh flex-col items-center justify-center gap-6 bg-background p-6 md:p-10">
+      <Empty>
+        <EmptyHeader>
+          <EmptyTitle>404 - Not Found</EmptyTitle>
+          <EmptyDescription>
+            The page you&apos;re looking for doesn&apos;t exist.
+          </EmptyDescription>
+        </EmptyHeader>
+        <EmptyContent>
+          <EmptyDescription>
+            Need help? <a href="#">Contact support</a>
+          </EmptyDescription>
+        </EmptyContent>
+      </Empty>
+    </main>
   )
 }

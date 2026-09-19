@@ -4,11 +4,11 @@ import { HugeiconsIcon } from '@hugeicons/react'
 import {
   CommandIcon,
   DashboardSquare01Icon,
-  Folder01Icon,
-  Menu01Icon,
-  UserGroupIcon,
+  ShoppingBag01Icon,
+  DeliveryBox01Icon,
+  UserListIcon,
 } from '@hugeicons/core-free-icons'
-import { NavMain } from '@/components/layout/sidebar/nav-main'
+import { NavMain } from '@/components/layout/nav-main'
 import {
   Sidebar,
   SidebarContent,
@@ -20,9 +20,9 @@ import {
 
 const navigation = [
   { title: 'Dashboard', url: '/dashboard', icon: DashboardSquare01Icon },
-  { title: 'Products', url: '/products', icon: Folder01Icon },
-  { title: 'Orders', url: '/orders', icon: Menu01Icon },
-  { title: 'Customers', url: '/customers', icon: UserGroupIcon },
+  { title: 'Orders', url: '/orders', icon: DeliveryBox01Icon },
+  { title: 'Products', url: '/products', icon: ShoppingBag01Icon },
+  { title: 'Customers', url: '/customers', icon: UserListIcon },
 ]
 
 export function AppSidebar(props: ComponentProps<typeof Sidebar>) {
@@ -33,7 +33,7 @@ export function AppSidebar(props: ComponentProps<typeof Sidebar>) {
           <SidebarMenuItem>
             <SidebarMenuButton render={<Link to="/dashboard" />}>
               <HugeiconsIcon icon={CommandIcon} strokeWidth={2} />
-              <span className="text-base font-semibold">Mutayloo Admin</span>
+              <span className="text-base font-semibold">Mutayloo</span>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>

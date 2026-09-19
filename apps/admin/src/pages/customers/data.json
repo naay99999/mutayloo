@@ -1,0 +1,14 @@
+[
+  { "id": "CUS-2048", "name": "Mali Srisawat", "email": "mali@example.com", "phone": "+66 81 234 5678", "orders": 8, "lifetimeSpend": 12480, "status": "Active", "joinedAt": "Mar 12, 2025" },
+  { "id": "CUS-2047", "name": "Anan Chaiyawat", "email": "anan@example.com", "phone": "+66 89 456 1234", "orders": 3, "lifetimeSpend": 4290, "status": "Active", "joinedAt": "Jun 4, 2025" },
+  { "id": "CUS-2046", "name": "Pimchanok K.", "email": "pimchanok@example.com", "phone": "+66 95 321 8765", "orders": 12, "lifetimeSpend": 18920, "status": "VIP", "joinedAt": "Jan 26, 2025" },
+  { "id": "CUS-2045", "name": "Narin Wong", "email": "narin@example.com", "phone": "+66 82 654 7890", "orders": 6, "lifetimeSpend": 9760, "status": "Active", "joinedAt": "Aug 19, 2025" },
+  { "id": "CUS-2044", "name": "Suda Prasert", "email": "suda@example.com", "phone": "+66 87 111 2233", "orders": 2, "lifetimeSpend": 1870, "status": "Active", "joinedAt": "Sep 2, 2025" },
+  { "id": "CUS-2043", "name": "Kritsana Lee", "email": "kritsana@example.com", "phone": "+66 98 765 4321", "orders": 1, "lifetimeSpend": 420, "status": "Inactive", "joinedAt": "Feb 8, 2025" },
+  { "id": "CUS-2042", "name": "Thana Wongsakul", "email": "thana@example.com", "phone": "+66 86 345 6789", "orders": 9, "lifetimeSpend": 14360, "status": "VIP", "joinedAt": "Apr 30, 2025" },
+  { "id": "CUS-2041", "name": "Ploy N.", "email": "ploy@example.com", "phone": "+66 80 987 6543", "orders": 4, "lifetimeSpend": 5680, "status": "Active", "joinedAt": "Jul 15, 2025" },
+  { "id": "CUS-2040", "name": "Kanya Charoen", "email": "kanya@example.com", "phone": "+66 91 246 8135", "orders": 5, "lifetimeSpend": 7350, "status": "Active", "joinedAt": "May 22, 2025" },
+  { "id": "CUS-2039", "name": "Thanawat R.", "email": "thanawat@example.com", "phone": "+66 83 357 9246", "orders": 2, "lifetimeSpend": 1640, "status": "Inactive", "joinedAt": "Nov 11, 2024" },
+  { "id": "CUS-2038", "name": "Patsorn T.", "email": "patsorn@example.com", "phone": "+66 92 468 1357", "orders": 7, "lifetimeSpend": 10940, "status": "Active", "joinedAt": "Dec 3, 2024" },
+  { "id": "CUS-2037", "name": "Arisa K.", "email": "arisa@example.com", "phone": "+66 84 579 2468", "orders": 10, "lifetimeSpend": 16780, "status": "VIP", "joinedAt": "Oct 18, 2024" }
+]
