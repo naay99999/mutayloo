@@ -1,6 +1,6 @@
-# Mutayloo
+# Suannn
 
-Mutayloo is a Bun workspace with an Elysia API, a customer storefront, an administration app, and a shared shadcn/ui package.
+Suannn is a Bun workspace with an Elysia API, a customer storefront, an administration app, and a shared shadcn/ui package.
 
 ## Workspace
 

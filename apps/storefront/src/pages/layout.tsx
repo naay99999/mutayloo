@@ -12,7 +12,7 @@ export function StorefrontLayout() {
       <header className="border-b">
         <div className="mx-auto flex min-h-16 max-w-6xl items-center justify-between gap-6 px-4 sm:px-6">
           <NavLink className="text-lg font-semibold tracking-tight" to="/">
-            Mutayloo
+            Suannn
           </NavLink>
           <nav aria-label="Main navigation" className="flex items-center gap-1">
             {navigation.map((item) => (
@@ -35,7 +35,7 @@ export function StorefrontLayout() {
       </main>
       <footer className="border-t">
         <div className="mx-auto max-w-6xl px-4 py-6 text-sm text-muted-foreground sm:px-6">
-          © {new Date().getFullYear()} Mutayloo
+          © {new Date().getFullYear()} Suannn
         </div>
       </footer>
     </div>

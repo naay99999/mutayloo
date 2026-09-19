@@ -33,7 +33,7 @@ export function AppSidebar(props: ComponentProps<typeof Sidebar>) {
           <SidebarMenuItem>
             <SidebarMenuButton render={<Link to="/dashboard" />}>
               <HugeiconsIcon icon={CommandIcon} strokeWidth={2} />
-              <span className="text-base font-semibold">Mutayloo</span>
+              <span className="text-base font-semibold">Suannn</span>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
